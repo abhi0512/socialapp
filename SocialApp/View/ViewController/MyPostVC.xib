@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPostVC" customModule="SocialApp" customModuleProvider="target">
+            <connections>
+                <outlet property="postCltView" destination="zAo-QS-Pli" id="EQK-qy-HYV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Kg-9a-ZM2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZS-qZ-NqM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mF0-aQ-krI">
+                            <rect key="frame" x="10" y="6" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="g1g-gw-pvL"/>
+                                <constraint firstAttribute="width" constant="32" id="xFi-FW-VNE"/>
+                            </constraints>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="btnBackWithSender:" destination="-1" eventType="touchUpInside" id="zpE-FX-Fnj"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x97-xf-Osa">
+                            <rect key="frame" x="184" y="12" width="46.5" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="cBD-r1-mKv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="mF0-aQ-krI" firstAttribute="leading" secondItem="LZS-qZ-NqM" secondAttribute="leading" constant="10" id="Hfw-PO-nqe"/>
+                        <constraint firstItem="x97-xf-Osa" firstAttribute="centerY" secondItem="LZS-qZ-NqM" secondAttribute="centerY" id="PaW-sK-vjF"/>
+                        <constraint firstItem="mF0-aQ-krI" firstAttribute="centerY" secondItem="LZS-qZ-NqM" secondAttribute="centerY" id="QFo-tq-KHt"/>
+                        <constraint firstItem="x97-xf-Osa" firstAttribute="centerX" secondItem="LZS-qZ-NqM" secondAttribute="centerX" id="kOK-Gv-BBp"/>
+                        <constraint firstAttribute="height" constant="44" id="vX7-aj-vue"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zAo-QS-Pli">
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sbf-sL-1Md">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CIp-c6-vKy"/>
+                        <outlet property="delegate" destination="-1" id="ZXY-WE-jm7"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zAo-QS-Pli" secondAttribute="trailing" id="4tE-Cy-WFr"/>
+                <constraint firstAttribute="bottom" secondItem="zAo-QS-Pli" secondAttribute="bottom" id="9et-j4-Oph"/>
+                <constraint firstItem="1Kg-9a-ZM2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dmv-xn-dln"/>
+                <constraint firstItem="zAo-QS-Pli" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FAL-O2-viz"/>
+                <constraint firstItem="LZS-qZ-NqM" firstAttribute="bottom" secondItem="1Kg-9a-ZM2" secondAttribute="bottom" id="FG4-hP-lSk"/>
+                <constraint firstItem="1Kg-9a-ZM2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="H0r-c7-yF0"/>
+                <constraint firstItem="LZS-qZ-NqM" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YLi-6J-jQi"/>
+                <constraint firstItem="1Kg-9a-ZM2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bF3-YH-8mT"/>
+                <constraint firstItem="LZS-qZ-NqM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pzR-QM-Vw8"/>
+                <constraint firstItem="zAo-QS-Pli" firstAttribute="top" secondItem="1Kg-9a-ZM2" secondAttribute="bottom" id="vzS-On-PBk"/>
+                <constraint firstItem="LZS-qZ-NqM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zir-op-Kor"/>
+            </constraints>
+            <point key="canvasLocation" x="47.826086956521742" y="69.642857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

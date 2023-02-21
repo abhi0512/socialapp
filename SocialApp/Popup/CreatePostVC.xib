@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePostVC" customModule="SocialApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIj-T5-Ciz">
+                    <rect key="frame" x="10" y="64" width="394" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5pO-6D-cOZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G0w-YB-yXF">
+                    <rect key="frame" x="0.0" y="109" width="414" height="1"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Dy6-Tn-BUE"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySC-V3-mhU">
+                    <rect key="frame" x="15" y="140" width="384" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5XJ-bz-6C1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                    <state key="normal" title="   Post" image="createpost">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnCreatePostClickWithSender:" destination="-1" eventType="touchUpInside" id="V7w-uA-kX9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="G0w-YB-yXF" firstAttribute="top" secondItem="cIj-T5-Ciz" secondAttribute="bottom" constant="5" id="6dj-ra-mWh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cIj-T5-Ciz" secondAttribute="trailing" constant="10" id="8VJ-ls-ZUY"/>
+                <constraint firstItem="ySC-V3-mhU" firstAttribute="top" secondItem="G0w-YB-yXF" secondAttribute="bottom" constant="30" id="H5c-kS-QY0"/>
+                <constraint firstItem="G0w-YB-yXF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Km2-Tr-Y6O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="G0w-YB-yXF" secondAttribute="trailing" id="NVC-23-XuF"/>
+                <constraint firstItem="ySC-V3-mhU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="dC5-Ek-FxN"/>
+                <constraint firstItem="cIj-T5-Ciz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="jxn-G7-TzH"/>
+                <constraint firstItem="cIj-T5-Ciz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="vut-lz-bUn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ySC-V3-mhU" secondAttribute="trailing" constant="15" id="x3R-qp-RBu"/>
+                <constraint firstItem="cIj-T5-Ciz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yLg-qH-HNd"/>
+            </constraints>
+            <point key="canvasLocation" x="140.57971014492756" y="62.946428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="createpost" width="30" height="30"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
